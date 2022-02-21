@@ -69,9 +69,6 @@ const VideoContainer = styled.div`
 	height: 500px;
 	width: 100vw;
 `;
-const VideoTitle = styled.h1`
-	color: white;
-`;
 
 const ViewVideosContainer = styled.div`
 	display: flex;
@@ -86,6 +83,8 @@ const ViewVideosContainer = styled.div`
 const ViewVideos = styled.button`
 	height: 53px;
 	width: 243px;
+	background-color: #f5cb5c;
+	color: #333533;
 	position: absolute;
 	font-size: 20px;
 	font-weight: 900;
@@ -115,7 +114,6 @@ export default function LatestVideos() {
 				{latestVideos.map((item) => (
 					<Slide key={item.id}>
 						<VideoContainer>
-							<VideoTitle>{item.title}</VideoTitle>
 							<ReactPlayer
 								width={"720px"}
 								height={"480px"}
