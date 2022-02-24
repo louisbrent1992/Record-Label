@@ -7,11 +7,11 @@ import {
 } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
-import { mobile } from "../responsive";
+import { mobile, smallMobile, tablet } from "../responsive";
 
 const Container = styled.div`
 	height: 80px;
-	width: 100vw;
+	margin: 0 auto;
 	display: flex;
 	justify-content: center;
 	background-color: black;
@@ -20,17 +20,20 @@ const Container = styled.div`
 
 const Wrapper = styled.div`
 	display: flex;
+	width: 100%;
 	align-items: center;
 	justify-content: center;
 	margin: 0 auto;
 	gap: 3rem;
 	overflow-x: auto;
+	overflow-y: hidden;
 
 	::-webkit-scrollbar {
 		display: none;
 	}
 
 	${mobile({ gap: "0.5rem" })}
+	${tablet({ marginLeft: "2rem", gap: "2rem" })}
 `;
 
 const LogoContainer = styled.div`
@@ -56,9 +59,11 @@ const CopyrightIcon = styled(Copyright)``;
 
 const SocialContainer = styled.div`
 	display: flex;
+	gap: 1rem;
+
+	${smallMobile({ flexDirection: "column", display: "none" })}
 `;
 const SocialIcon = styled.div`
-	width: 40px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -81,6 +86,8 @@ const SocialIcon = styled.div`
 const InfoContainer = styled.div`
 	display: flex;
 	align-items: center;
+
+	${smallMobile({ flexDirection: "column" })}
 `;
 const Info = styled.h5`
 	font-size: 11px;
