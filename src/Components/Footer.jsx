@@ -22,12 +22,12 @@ const Wrapper = styled.div`
 	width: 85vw;
 	align-items: center;
 	justify-content: center;
+	margin: 0 auto;
+	gap: 3rem;
 `;
 
 const LogoContainer = styled.div`
 	display: flex;
-	width: 100px;
-	justify-content: center;
 `;
 const Logo = styled.h3`
 	font-weight: 900;
@@ -36,13 +36,9 @@ const Logo = styled.h3`
 
 const SocialContainer = styled.div`
 	display: flex;
-	margin-left: 100px;
-	margin-right: 0;
-	padding-right: 0;
 `;
 const SocialIcon = styled.div`
 	width: 40px;
-	height: 40px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -64,12 +60,10 @@ const SocialIcon = styled.div`
 
 const InfoContainer = styled.div`
 	display: flex;
-	align-items: center;
-	height: 15px;
 `;
 const Info = styled.h5`
-	margin-right: 20px;
 	font-size: 11px;
+	margin-right: 1rem;
 `;
 const Link = styled.a`
 	font-weight: 900;
@@ -113,10 +107,10 @@ export default function Footer({ social }) {
 				</LogoContainer>
 				<InfoContainer>
 					<Copyright style={{ fontSize: "small" }} />
+					<Link src="" style={{ fontSize: "11px", marginRight: "1rem" }}>
+						2022 All Strictly Business Records
+					</Link>
 
-					<Info>
-						<Link src="">2022 All Strictly Business Records</Link>
-					</Info>
 					<Info>
 						<Link>Privacy Policy</Link>
 					</Info>
