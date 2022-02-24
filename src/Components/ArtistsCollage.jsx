@@ -3,17 +3,19 @@ import styled from "styled-components";
 import Artist from "./Artist";
 
 const Container = styled.div`
-	height: 100vh;
-	width: 100vw;
+	height: 100%;
+	width: 100%;
 	background-color: white;
 	color: #333533;
 `;
 
-const Wrapper = styled.div`
-	height: 60vh;
-	width: 100vw;
+const ArtistsContainer = styled.div`
 	display: flex;
 	flex-wrap: wrap;
+	position: relative;
+	height: auto;
+	width: 100%;
+	border: 1px solid red;
 `;
 
 const TitleContainer = styled.div`
@@ -35,7 +37,7 @@ export default function ArtistsCollage({ labelArtists }) {
 			<TitleContainer>
 				<Title>Artists</Title>
 			</TitleContainer>
-			<Wrapper>
+			<ArtistsContainer>
 				{labelArtists.map((artist) => (
 					<Artist
 						key={artist.id}
@@ -46,7 +48,7 @@ export default function ArtistsCollage({ labelArtists }) {
 						social={artist.social}
 					/>
 				))}
-			</Wrapper>
+			</ArtistsContainer>
 		</Container>
 	);
 }

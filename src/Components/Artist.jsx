@@ -8,6 +8,7 @@ import {
 } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { mobile } from "../responsive";
 
 const Info = styled.div`
 	height: 100%;
@@ -22,23 +23,23 @@ const Info = styled.div`
 
 const ArtistContainer = styled.div`
 	display: flex;
-	height: 205px;
+	flex: 1 1 33%;
+	width: 100%;
 	position: relative;
-
+	border: 1px solid red;
 	&:hover ${Info} {
 		opacity: 1;
 	}
-`;
 
-const ImgContainer = styled.div``;
+	${mobile({ flex: "1 0 50%" })}
+`;
 
 const Image = styled.img`
 	z-index: 1;
 	position: relative;
 	object-fit: cover;
-	width: 506px;
-	max-height: 205px;
-	margin-bottom: 5px;
+	width: 100%;
+	height: 205px;
 	transition: all 0.5s ease;
 `;
 
@@ -127,9 +128,8 @@ const SocialMediaIcons = styled.div`
 export default function Artist({ name, website, img, store, social }) {
 	return (
 		<ArtistContainer>
-			<ImgContainer>
-				<Image src={img} />
-			</ImgContainer>
+			<Image src={img} />
+
 			<Info>
 				<TopRow>
 					<StoreIconContainer>
