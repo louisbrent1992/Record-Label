@@ -83,17 +83,17 @@ export const latestVideos = [
 export const labelArtists = [
 	{
 		id: 1,
-		name: "",
+		name: "THOMAS",
 		img: "images/artist1.jpg",
 		social: {
-			Youtube: { url: "" },
+			Youtube: { url: "youtube_url" },
 			Instagram: { url: "" },
-			Facebook: { url: "" },
+			Facebook: { url: "facebook_url" },
 			Twitter: { url: "" },
-			Spotify: { url: "" },
+			Spotify: { url: "spotify_url" },
 		},
 		website: "",
-		store: "",
+		store: "store_url",
 	},
 	{
 		id: 2,
