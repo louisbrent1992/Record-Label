@@ -46,7 +46,7 @@ const NavbarInnerContainer = styled.div`
 
 const NavbarLinkContainer = styled.div`
 	display: flex;
-	gap: 1rem;
+	gap: 2rem;
 `;
 
 const NavbarLink = styled(Link)`

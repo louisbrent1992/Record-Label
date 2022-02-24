@@ -41,6 +41,9 @@ const Image = styled.img`
 	width: 100%;
 	height: 205px;
 	transition: all 0.5s ease;
+
+	${mobile({ ojectFit: "contain" })};
+	${tablet({ ojectFit: "contain" })};
 `;
 
 const TopRow = styled.div`

@@ -8,6 +8,7 @@ const Image = styled.img`
 	height: 403px;
 	width: 403px;
 	margin-right: 43px;
+	object-fit: cover;
 `;
 
 const TitleContainer = styled.div`

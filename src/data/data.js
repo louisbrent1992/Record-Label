@@ -181,7 +181,7 @@ export const labelArtists = [
 	},
 	{
 		id: 8,
-		name: "Stacy",
+		name: "STACY",
 		img: "images/artist8.jpg",
 		social: {
 			Youtube: { url: "youtube_url" },
@@ -195,7 +195,7 @@ export const labelArtists = [
 	},
 	{
 		id: 9,
-		name: "Dylon",
+		name: "DYLON",
 		img: "images/artist9.jpg",
 		social: {
 			Youtube: { url: "youtube_url" },
@@ -212,7 +212,7 @@ export const labelArtists = [
 export const newReleases = [
 	{
 		id: 1,
-		title: "album_title",
+		title: "ALBUM_TITLE",
 		img: "images/featured1.jpg",
 		type: "music",
 		source: "album_page",
@@ -220,7 +220,7 @@ export const newReleases = [
 	},
 	{
 		id: 2,
-		title: "album_title",
+		title: "ALBUM_TITLE",
 		img: "images/featured2.jpg",
 		type: "music",
 		source: "album_page",
@@ -228,7 +228,7 @@ export const newReleases = [
 	},
 	{
 		id: 3,
-		title: "merch_title",
+		title: "MERCH_TITLE",
 		img: "images/featured3.jpg",
 		type: "merch",
 		source: "product_page",

@@ -2,6 +2,7 @@ import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
 import React, { useState } from "react";
 import styled from "styled-components";
 import { sliderItems } from "../data/data";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
 	width: 100%;
@@ -48,6 +49,9 @@ const ImgContainer = styled.div`
 const Image = styled.img`
 	height: 80vh;
 	width: 100vw;
+	object-fit: cover;
+
+	${mobile({ ojectFit: "contain" })}
 `;
 
 export default function Slider() {
