@@ -25,6 +25,11 @@ const Wrapper = styled.div`
 	justify-content: center;
 	margin: 0 auto;
 	gap: 3rem;
+	overflow-x: auto;
+
+	::-webkit-scrollbar {
+		display: none;
+	}
 
 	${mobile({ gap: "0.5rem" })}
 `;
