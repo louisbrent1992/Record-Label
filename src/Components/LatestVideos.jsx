@@ -3,10 +3,11 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { latestVideos } from "../data/data";
 import ReactPlayer from "react-player/youtube";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
 	background-color: black;
-	height: 100vh;
+	height: 80vh;
 	display: flex;
 	position: relative;
 	flex-wrap: wrap;
@@ -33,28 +34,28 @@ const Arrow = styled.div`
 `;
 const Wrapper = styled.div`
 	display: flex;
-	height: 75vh;
+	height: 60vh;
 	width: 100vw;
 	align-items: center;
 	transition: all 1.5s ease;
 	transform: translateX(${(props) => props.slideIndex * -100}vw);
 `;
 
-// Preferred settings
 const TitleContainer = styled.div`
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
 	position: relative;
-	height: 15vh;
 	width: 88vw;
+
+	${mobile({ justifyContent: "center" })}
 `;
 
 const Title = styled.h1`
 	color: white;
 	font-weight: 900;
 	font-size: 48px;
-	margin: 0px, 0px, 14px;
+	margin-top: 0.5rem;
 `;
 
 const Slide = styled.div`
@@ -63,25 +64,29 @@ const Slide = styled.div`
 
 // Preferred settings
 const VideoContainer = styled.div`
-	display: flex;
-	position: relative;
-	justify-content: center;
-	height: 500px;
 	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+`;
+const Video = styled(ReactPlayer)`
+	border: 1px solid red;
+	width: 400px;
+	height: 540px;
 `;
 
 const ViewVideosContainer = styled.div`
 	display: flex;
-	height: 55px;
 	width: 87vw;
 	justify-content: flex-end;
 	align-items: flex-end;
 	position: relative;
-	margin-top: 16px;
 	padding-right: 28px;
+
+	${mobile({ width: "100vw", paddingRight: 0 })};
 `;
 const ViewVideos = styled.button`
-	height: 53px;
+	height: 55px;
 	width: 243px;
 	background-color: #f5cb5c;
 	color: #333533;
@@ -114,16 +119,7 @@ export default function LatestVideos() {
 				{latestVideos.map((item) => (
 					<Slide key={item.id}>
 						<VideoContainer>
-							<ReactPlayer
-								width={"720px"}
-								height={"480px"}
-								style={{
-									position: "absolute",
-									margin: "10px 0px 80px 0px",
-								}}
-								url={item.video}
-								alt="music video"
-							/>
+							<Video url={item.video} alt="music video" />
 						</VideoContainer>
 					</Slide>
 				))}
