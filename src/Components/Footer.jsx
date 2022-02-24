@@ -10,7 +10,7 @@ import styled from "styled-components";
 import { mobile } from "../responsive";
 
 const Container = styled.div`
-	height: 65px;
+	height: 80px;
 	width: 100vw;
 	display: flex;
 	justify-content: center;
@@ -20,7 +20,6 @@ const Container = styled.div`
 
 const Wrapper = styled.div`
 	display: flex;
-	width: 85vw;
 	align-items: center;
 	justify-content: center;
 	margin: 0 auto;
