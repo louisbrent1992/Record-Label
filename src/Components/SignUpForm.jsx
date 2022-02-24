@@ -125,13 +125,13 @@ export default function SignUpForm() {
 				<CheckboxContainer>
 					<CheckBox
 						type="checkbox"
-						name="ALL STRICTLY BUSINESS"
-						id="ALL STRICTLY BUSINESS"
-						value="ALL STRICTLY BUSINESS"
+						name="STRICTLY ALL BUSINESS"
+						id="STRICTLY ALL BUSINESS"
+						value="STRICTLY ALL BUSINESS"
 						checked="checked"
 						style={{ fontSize: "medium", marginRight: "10px" }}
 					/>
-					<CheckOption>ALL STRICTLY BUSINESS</CheckOption>
+					<CheckOption>STRICTLY ALL BUSINESS</CheckOption>
 					<CheckBox
 						type="checkbox"
 						name="ALL OF OUR AFFILIATES"
@@ -143,7 +143,7 @@ export default function SignUpForm() {
 					<CheckOption>OUR BUSINESS AFFILIATES</CheckOption>
 				</CheckboxContainer>
 				<Agreement>
-					Emails will be sent by or on behalf of All Strictly Business Music
+					Emails will be sent by or on behalf of Strictly All Business Music
 					Group, Los Angeles, CA 90043 (111) 111-1111. You may withdraw your
 					consent at any time. <Link>Privacy Policy</Link> /{" "}
 					<Link>Do Not Sell My Personal Information</Link>

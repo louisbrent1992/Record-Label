@@ -39,7 +39,7 @@ export default function SignUp() {
 		<Container>
 			<Left>
 				<Announcement>
-					Sign-up for updates from All Strictly Business Records.
+					Sign-up for updates from Strictly All Business Records.
 				</Announcement>
 			</Left>
 			<Right>
