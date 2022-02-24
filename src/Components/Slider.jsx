@@ -5,7 +5,7 @@ import { sliderItems } from "../data/data";
 
 const Container = styled.div`
 	width: 100%;
-	height: 100vh;
+	height: 80vh;
 	display: flex;
 	position: relative;
 	overflow: hidden;
@@ -37,16 +37,16 @@ const Wrapper = styled.div`
 `;
 const Slide = styled.div`
 	width: 100vw;
-	height: 100vh;
+	height: 80vh;
 	display: flex;
 	align-items: center;
 	background-color: #${(props) => props.bg};
 `;
 const ImgContainer = styled.div`
-	height: 100vh;
+	height: 80vh;
 `;
 const Image = styled.img`
-	height: 100vh;
+	height: 80vh;
 	width: 100vw;
 `;
 
