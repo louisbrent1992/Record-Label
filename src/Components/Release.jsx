@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { mobile } from "../responsive";
+import { mobile, tablet } from "../responsive";
 
 const Container = styled.div`
 	height: 100%;
@@ -8,7 +8,7 @@ const Container = styled.div`
 	${mobile({
 		display: "flex",
 		flexDirection: "column",
-		alignItems: "center",
+		alignItems: "flex-start",
 	})}
 `;
 const Image = styled.img`
@@ -16,6 +16,9 @@ const Image = styled.img`
 	width: 403px;
 	margin-right: 43px;
 	object-fit: cover;
+
+	${mobile({ height: "303px", width: "297px" })};
+	${tablet({ height: "403px", width: "403px" })};
 `;
 
 const TitleContainer = styled.div`
