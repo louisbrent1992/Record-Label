@@ -10,7 +10,7 @@ import styled from "styled-components";
 import { mobile } from "../responsive";
 
 const Container = styled.div`
-	height: 60px;
+	height: 65px;
 	width: 100vw;
 	display: flex;
 	justify-content: center;
@@ -26,7 +26,7 @@ const Wrapper = styled.div`
 	margin: 0 auto;
 	gap: 3rem;
 
-	${mobile({ gap: "1rem" })}
+	${mobile({ gap: "0.5rem" })}
 `;
 
 const LogoContainer = styled.div`
@@ -38,6 +38,17 @@ const Logo = styled.h3`
 	font-weight: 900;
 	font-size: 18px;
 `;
+
+const CopyrightContainer = styled.div`
+	display: flex;
+	font-size: 11px;
+	margin-right: 1rem;
+	&:hover {
+		transition: color 0.2s ease-in-out;
+		color: #f5cb5c;
+	}
+`;
+const CopyrightIcon = styled(Copyright)``;
 
 const SocialContainer = styled.div`
 	display: flex;
@@ -65,6 +76,7 @@ const SocialIcon = styled.div`
 
 const InfoContainer = styled.div`
 	display: flex;
+	align-items: center;
 `;
 const Info = styled.h5`
 	font-size: 11px;
@@ -111,10 +123,12 @@ export default function Footer({ social }) {
 					<Logo>SAB</Logo>
 				</LogoContainer>
 				<InfoContainer>
-					<Copyright style={{ fontSize: "small" }} />
-					<Link src="" style={{ fontSize: "11px", marginRight: "1rem" }}>
-						2022 All Strictly Business Records
-					</Link>
+					<CopyrightContainer>
+						<CopyrightIcon style={{ fontSize: "small" }} />
+						<Link src="" style={{ fontSize: "11px" }}>
+							2022 Strictly All Business Records
+						</Link>
+					</CopyrightContainer>
 
 					<Info>
 						<Link>Privacy Policy</Link>
