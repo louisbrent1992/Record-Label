@@ -7,9 +7,10 @@ import {
 } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
-	height: 50px;
+	height: 60px;
 	width: 100vw;
 	display: flex;
 	justify-content: center;
@@ -24,10 +25,14 @@ const Wrapper = styled.div`
 	justify-content: center;
 	margin: 0 auto;
 	gap: 3rem;
+
+	${mobile({ gap: "1rem" })}
 `;
 
 const LogoContainer = styled.div`
 	display: flex;
+
+	${mobile({ display: "none" })}
 `;
 const Logo = styled.h3`
 	font-weight: 900;
