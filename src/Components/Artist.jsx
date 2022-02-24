@@ -8,7 +8,7 @@ import {
 } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { mobile } from "../responsive";
+import { mobile, tablet } from "../responsive";
 
 const Info = styled.div`
 	height: 100%;
@@ -26,12 +26,12 @@ const ArtistContainer = styled.div`
 	flex: 1 1 33%;
 	width: 100%;
 	position: relative;
-	border: 1px solid red;
 	&:hover ${Info} {
 		opacity: 1;
 	}
 
-	${mobile({ flex: "1 0 50%" })}
+	${mobile({ flex: "1 1 100%" })}
+	${tablet({ flex: "1 1 33%" })}
 `;
 
 const Image = styled.img`

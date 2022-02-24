@@ -66,7 +66,7 @@ const VideoContainer = styled.div`
 	width: 100vw;
 	display: flex;
 	justify-content: center;
-	flex: 1 1 33%;
+	flex: 1 1 100%;
 `;
 const Video = styled(ReactPlayer)`
 	width: 400px;

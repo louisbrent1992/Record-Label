@@ -15,7 +15,6 @@ const ArtistsContainer = styled.div`
 	position: relative;
 	height: auto;
 	width: 100%;
-	border: 1px solid red;
 `;
 
 const TitleContainer = styled.div`
