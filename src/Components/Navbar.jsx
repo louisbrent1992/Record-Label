@@ -8,7 +8,9 @@ import { desktop, mobile } from "../responsive";
 const NavbarContainer = styled.nav`
 	width: 100%;
 	height: ${(props) => (props.extendNavbar ? "100vh" : "80px")};
-	background-color: black;
+	background-color: ${(props) =>
+		props.extendNavbar ? "hsl(0 0% 100% / 0.1)" : "black"};
+	backdrop-filter: ${(props) => props.extendNavbar && "blur(1rem)"};
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -111,6 +113,11 @@ const OpenLinksButton = styled.button`
 	position: absolute;
 	top: 0;
 	right: 0;
+
+	&:hover {
+		transition: all 0.2s ease-in-out;
+		color: #f5cb5c;
+	}
 
 	${desktop({ display: "none" })};
 `;
