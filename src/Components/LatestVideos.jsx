@@ -30,7 +30,6 @@ const Arrow = styled.div`
 	cursor: pointer;
 	opacity: 0.5;
 	z-index: 2;
-	margin-right: 15px;
 `;
 const Wrapper = styled.div`
 	display: flex;
@@ -66,11 +65,10 @@ const Slide = styled.div`
 const VideoContainer = styled.div`
 	width: 100vw;
 	display: flex;
-	flex-direction: column;
-	align-items: center;
+	justify-content: center;
+	flex: 1 1 33%;
 `;
 const Video = styled(ReactPlayer)`
-	border: 1px solid red;
 	width: 400px;
 	height: 540px;
 `;
