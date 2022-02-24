@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { newReleases } from "../data/data";
+import { mobile } from "../responsive";
 import Release from "./Release";
 
 const Container = styled.div`
@@ -21,6 +22,8 @@ const TitleContainer = styled.div`
 	margin-top: 0;
 	justify-content: flex-start;
 	align-items: center;
+
+	${mobile({ justifyContent: "center" })}
 `;
 const Title = styled.h1`
 	font-size: 48px;
@@ -34,6 +37,11 @@ const ReleasesContainer = styled.div`
 	display: flex;
 	align-items: center;
 	margin-bottom: 1px;
+	overflow-x: auto;
+
+	::-webkit-scrollbar {
+		display: none;
+	}
 `;
 const ViewReleasesContainer = styled.div`
 	display: flex;
@@ -43,13 +51,15 @@ const ViewReleasesContainer = styled.div`
 	align-items: flex-end;
 	margin-top: 9px;
 	padding-right: 28px;
+
+	${mobile({ width: "100vw", paddingRight: 0 })};
 `;
 const ViewReleases = styled.button`
 	height: 53px;
 	width: 243px;
+	border: none;
 	font-size: 20px;
 	font-weight: 900;
-	border: none;
 	background-color: #f5cb5c;
 	color: #333533;
 	cursor: pointer;
