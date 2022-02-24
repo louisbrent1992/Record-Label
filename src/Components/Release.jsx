@@ -1,8 +1,15 @@
 import React from "react";
 import styled from "styled-components";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
 	height: 100%;
+
+	${mobile({
+		display: "flex",
+		flexDirection: "column",
+		alignItems: "center",
+	})}
 `;
 const Image = styled.img`
 	height: 403px;

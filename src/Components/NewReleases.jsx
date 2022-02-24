@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import { newReleases } from "../data/data";
-import { mobile } from "../responsive";
+import { mobile, tablet } from "../responsive";
 import Release from "./Release";
 
 const Container = styled.div`
-	height: 110vh;
+	height: auto;
 	width: 100vw;
 	display: flex;
 	background-color: white;
@@ -13,13 +13,14 @@ const Container = styled.div`
 	justify-content: center;
 	margin: 0;
 	color: #333533;
+
+	${tablet({ height: "auto" })}
 `;
 
 const TitleContainer = styled.div`
 	display: flex;
 	height: 15vh;
 	width: 88vw;
-	margin-top: 0;
 	justify-content: flex-start;
 	align-items: center;
 
@@ -32,16 +33,19 @@ const Title = styled.h1`
 	color: #333533;
 `;
 const ReleasesContainer = styled.div`
-	width: 88vw;
-	height: 86vh;
+	width: 100vw;
 	display: flex;
 	align-items: center;
-	margin-bottom: 1px;
+	padding-bottom: 6px;
 	overflow-x: auto;
+	overflow-y: hidden;
+	margin-left: 4rem;
 
 	::-webkit-scrollbar {
 		display: none;
 	}
+
+	${mobile({ marginLeft: "0.75rem" })}
 `;
 const ViewReleasesContainer = styled.div`
 	display: flex;
