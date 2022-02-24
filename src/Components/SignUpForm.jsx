@@ -2,30 +2,37 @@ import { CheckBox } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
 import { countryList } from "../data/countries";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
 	height: 100%;
-	width: 75%;
+	width: 100%;
 `;
 
 const Label = styled.h3`
 	margin-bottom: 5px;
 `;
 
-const Form = styled.form``;
+const Form = styled.form`
+	width: 75%;
+
+	${mobile({ margin: "0 auto" })}
+`;
 
 const InputContainer = styled.div`
 	margin-bottom: 10px;
 	margin-top: 10px;
 `;
 const Input = styled.input`
+	width: 100%;
 	border-top: none;
 	border-right: none;
 	border-left: none;
-	width: 99%;
+	border: none;
+	border-bottom: 2px solid #333533;
 	margin-bottom: 30px;
 	background-color: #f5cb5c;
-	font-size: 20px;
+	font-size: 16px;
 	color: #333533;
 `;
 
@@ -36,7 +43,8 @@ const TextField = styled.select`
 	border-top: none;
 	border-right: none;
 	border-left: none;
-	border-bottom-style: 1rem solid black;
+
+	border-bottom: 2px solid #333533;
 	width: 100%;
 	margin-bottom: 10px;
 	background-color: #f5cb5c;

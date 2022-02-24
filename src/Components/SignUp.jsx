@@ -5,28 +5,33 @@ import SignUpForm from "./SignUpForm";
 
 const Container = styled.div`
 	display: flex;
-	height: 70vh;
+	width: 100%;
+	align-items: center;
+	height: auto;
 	background-color: #f5cb5c;
 	${mobile({ flexDirection: "column" })};
 `;
 const Left = styled.div`
-	flex: 2;
+	flex: 33%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	padding: 151px;
 	margin-right: 20px;
+
+	${mobile({ padding: "30px 0px", textAlign: "center" })}
 `;
 
 const Announcement = styled.h1`
 	font-size: 50px;
 	color: #333533;
+
+	${mobile({ margin: "0 auto" })}
 `;
 
 const Right = styled.div`
-	flex: 2;
-	padding: 54px 20px;
-	${mobile({ backgroundColor: "#fff8f8" })}
+	flex: 66%;
+	margin: 54px 20px;
 `;
 
 export default function SignUp() {
