@@ -34,7 +34,7 @@ export default function ArtistsCollage({ labelArtists }) {
 	return (
 		<Container>
 			<TitleContainer>
-				<Title>Artists</Title>
+				<Title id="artists">Artists</Title>
 			</TitleContainer>
 			<ArtistsContainer>
 				{labelArtists.map((artist) => (

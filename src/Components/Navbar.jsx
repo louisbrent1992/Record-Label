@@ -16,8 +16,6 @@ const NavbarContainer = styled.nav`
 	align-items: center;
 	position: fixed;
 	z-index: 9;
-
-	${desktop({ height: "80px" })};
 `;
 
 const LeftContainer = styled.div`
@@ -176,7 +174,8 @@ export default function Navbar({ social }) {
 				<RightContainer>
 					<NavbarLinkContainer>
 						<NavbarLink to="/"> Home</NavbarLink>
-						<NavbarLink to="/music">Music</NavbarLink>
+						<NavbarLink to="#artists"> Artists</NavbarLink>
+						<NavbarLink to="/releases">Releases</NavbarLink>
 						<NavbarLink to="/videos"> Videos</NavbarLink>
 						<NavbarLink to="/news"> News</NavbarLink>
 						<NavbarLink to="/store"> Store</NavbarLink>
@@ -215,8 +214,9 @@ export default function Navbar({ social }) {
 			</NavbarInnerContainer>
 			{extendNavbar && (
 				<NavbarExtendedContainer>
-					<NavbarLinkExtended to="/"> Home</NavbarLinkExtended>
-					<NavbarLinkExtended to="/music">Music</NavbarLinkExtended>
+					<NavbarLinkExtended to="/">Home</NavbarLinkExtended>
+					<NavbarLink to="#Artists">Artists</NavbarLink>
+					<NavbarLink to="/releases">Releases</NavbarLink>
 					<NavbarLinkExtended to="/videos"> Videos</NavbarLinkExtended>
 					<NavbarLinkExtended to="/news"> News</NavbarLinkExtended>
 					<NavbarLinkExtended to="/store"> Store</NavbarLinkExtended>

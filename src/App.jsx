@@ -1,6 +1,5 @@
 import Home from "./Pages/Home";
-import Artists from "./Pages/Artists";
-import Music from "./Pages/Music";
+import Releases from "./Pages/Releases";
 import News from "./Pages/News";
 import Store from "./Pages/Store";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -15,11 +14,8 @@ function App() {
 				<Route exact path="/">
 					<Home />
 				</Route>
-				<Route path="/artists">
-					<Artists />
-				</Route>
-				<Route path="/music">
-					<Music />
+				<Route path="/releases">
+					<Releases />
 				</Route>
 				<Route path="/videos">
 					<Videos />
