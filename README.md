@@ -27,7 +27,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/louisbrent1992/Record-Label">
-    <img src="images/screenshot1.png" alt="Logo" width="200" height="200">
+    <img src="images/screenshot1.png" alt="Logo" width="400" height="250">
   </a>
 
 <h3 align="center">Record Label Website</h3>
@@ -56,13 +56,6 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
@@ -82,14 +75,7 @@
 
 ### Built With
 
-- [Next.js](https://nextjs.org/)
 - [React.js](https://reactjs.org/)
-- [Vue.js](https://vuejs.org/)
-- [Angular](https://angular.io/)
-- [Svelte](https://svelte.dev/)
-- [Laravel](https://laravel.com)
-- [Bootstrap](https://getbootstrap.com)
-- [JQuery](https://jquery.com)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -135,19 +121,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Your Name - [@louisbrent1992](https://twitter.com/louisbrent1992) - louisbrent1992@gmail.com
+Louis Brent - [@louisbrent1992](https://twitter.com/louisbrent1992) - louisbrent1992@gmail.com
 
 Project Link: [https://github.com/louisbrent1992/Record-Label](https://github.com/louisbrent1992/Record-Label)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGMENTS -->
-
-## Acknowledgments
-
-- []()
-- []()
-- []()
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -166,4 +142,4 @@ Project Link: [https://github.com/louisbrent1992/Record-Label](https://github.co
 [license-url]: https://github.com/louisbrent1992/Record-Label/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/louis-brent
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: images/screenshot2.png
