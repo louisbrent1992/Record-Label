@@ -95,7 +95,7 @@ const BottomRow = styled.div`
 	align-items: flex-end;
 `;
 const Name = styled.div`
-	margin: 10px;
+	margin: 10px 10px 10px 10px;
 	font-weight: 900;
 	color: white;
 
@@ -107,14 +107,15 @@ const Name = styled.div`
 `;
 const SocialContainer = styled.div``;
 const SocialMediaIcons = styled.div`
-	margin: 10px 10px 5px 10px;
+	margin: 10px 0px 5px 30px;
+
 	display: flex;
-	justify-content: space-between;
 	text-decoration: none;
+	flex-wrap: wrap;
+	gap: 5px;
 
 	a {
 		color: white;
-		margin-left: 5px;
 	}
 
 	a:visited {
