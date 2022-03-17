@@ -69,6 +69,29 @@ const NavbarLink = styled(Link)`
 	${mobile({ display: "none" })};
 `;
 
+const NavbarAnchor = styled.div`
+	color: white;
+	font-size: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	cursor: pointer;
+
+	a:visited {
+		color: white;
+	}
+
+	&:hover {
+		transition: all 0.2s ease-in-out;
+		text-decoration: underline;
+		text-decoration-thickness: 4px;
+		text-decoration-style: solid;
+		text-underline-offset: 0.5rem;
+		color: #f5cb5c;
+	}
+
+	${mobile({ display: "none" })};
+`;
+
 const NavbarLinkExtended = styled(Link)`
 	color: white;
 	font-size: 20px;
@@ -174,7 +197,11 @@ export default function Navbar({ social }) {
 				<RightContainer>
 					<NavbarLinkContainer>
 						<NavbarLink to="/"> Home</NavbarLink>
-						<NavbarLink to="#artists"> Artists</NavbarLink>
+						<NavbarAnchor>
+							<a style={{ textDecoration: "none" }} href="#artists">
+								Artists
+							</a>
+						</NavbarAnchor>
 						<NavbarLink to="/releases">Releases</NavbarLink>
 						<NavbarLink to="/videos"> Videos</NavbarLink>
 						<NavbarLink to="/news"> News</NavbarLink>
@@ -215,7 +242,7 @@ export default function Navbar({ social }) {
 			{extendNavbar && (
 				<NavbarExtendedContainer>
 					<NavbarLinkExtended to="/">Home</NavbarLinkExtended>
-					<NavbarLink to="#Artists">Artists</NavbarLink>
+					<NavbarAnchor href="#artists">Artists</NavbarAnchor>
 					<NavbarLink to="/releases">Releases</NavbarLink>
 					<NavbarLinkExtended to="/videos"> Videos</NavbarLinkExtended>
 					<NavbarLinkExtended to="/news"> News</NavbarLinkExtended>
