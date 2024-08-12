@@ -38,9 +38,7 @@ export default function SignUp() {
 	return (
 		<Container>
 			<Left>
-				<Announcement>
-					Sign-up for updates from Strictly All Business Records.
-				</Announcement>
+				<Announcement>Sign-up for updates from your-site-brand.</Announcement>
 			</Left>
 			<Right>
 				<SignUpForm />

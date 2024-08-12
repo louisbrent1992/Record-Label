@@ -131,13 +131,13 @@ export default function Footer({ social }) {
 					</SocialIcon>
 				</SocialContainer>
 				<LogoContainer>
-					<Logo>SAB</Logo>
+					<Logo>LOGO</Logo>
 				</LogoContainer>
 				<InfoContainer>
 					<CopyrightContainer>
 						<CopyrightIcon style={{ fontSize: "small" }} />
 						<Link src="" style={{ fontSize: "11px" }}>
-							2022 Strictly All Business Records
+							2022 Your-site-brand
 						</Link>
 					</CopyrightContainer>
 

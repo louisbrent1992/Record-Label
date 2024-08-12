@@ -30,10 +30,10 @@
     <img src="images/screenshot1.png" alt="Logo" width="400" height="250">
   </a>
 
-<h3 align="center">Record Label Website</h3>
+<h3 align="center">Artist Branding Site</h3>
 
   <p align="center">
-    Record label music website built using React with React Styled-Components.
+    An awesome project to showcase your music and brand! Built with React.js and styled with React Styled-Components.
     <br />
     <a href="https://github.com/louisbrent1992/Record-Label"><strong>Explore the docs »</strong></a>
     <br />
@@ -83,10 +83,9 @@
 
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-  - [ ] Nested Feature
+- [ ] Feature 1: Intuitive UI for users to navigate through the site.
+- [ ] Feature 2: Showcase music and videos and other artist content.
+- [ ] Feature 3: Contact form for users to reach out to the artists, among other features.
 
 See the [open issues](https://github.com/louisbrent1992/Record-Label/issues) for a full list of proposed features (and known issues).
 
