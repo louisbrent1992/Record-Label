@@ -49,12 +49,10 @@ const Logo = styled.h1`
 `;
 
 const OpenLinksButton = styled.button`
-	width: 60px;
-	height: 50px;
 	background: none;
 	border: none;
 	color: white;
-	font-size: 45px;
+	font-size: 50px;
 	cursor: pointer;
 
 	&:hover {
@@ -63,7 +61,6 @@ const OpenLinksButton = styled.button`
 	}
 
 	@media only screen and (min-width: 64rem) {
-		// Adjusted breakpoint to 1024px
 		display: none;
 	}
 `;

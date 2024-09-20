@@ -71,7 +71,7 @@ export default function Release({ release }) {
 	const { img, title, type, source, desc } = release;
 	return (
 		<Container>
-			<Image src={img} title={desc} />
+			<Image src={img} title={desc} alt={title} />
 			<TitleContainer>
 				<Title>{title ? title : "Title"}</Title>
 			</TitleContainer>

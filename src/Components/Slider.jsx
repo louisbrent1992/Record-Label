@@ -13,7 +13,7 @@ const Container = styled.div`
 	overflow: hidden;
 	background-color: black;
 
-	@media only screen and (max-width: 55rem) {
+	@media only screen and (max-width: 32rem) {
 		height: 50vh;
 	}
 `;
@@ -47,7 +47,7 @@ const Slide = styled.div`
 	align-items: center;
 	background-color: #${(props) => props.bg};
 
-	@media only screen and (max-width: 55rem) {
+	@media only screen and (max-width: 32rem) {
 		height: 50vh;
 	}
 `;
@@ -57,7 +57,7 @@ const ImgContainer = styled.div`
 const Image = styled(OptimizedImage)`
 	height: 100%;
 	width: 100vw;
-	object-fit: cover;
+	object-fit: fill;
 `;
 
 export default function Slider() {
@@ -79,7 +79,7 @@ export default function Slider() {
 				{sliderItems.map((item) => (
 					<Slide key={item.id} bg={item.bg}>
 						<ImgContainer>
-							<Image src={item.img} />
+							<Image src={item.img} alt={item.title} />
 						</ImgContainer>
 					</Slide>
 				))}

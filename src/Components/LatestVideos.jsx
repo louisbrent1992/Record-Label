@@ -1,85 +1,77 @@
 import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
 import React, { useState } from "react";
 import styled from "styled-components";
+import OptimizedVideo from "./OptimizedVideo";
 import { latestVideos } from "../data/data";
-import ReactPlayer from "react-player/youtube";
-import { mobile } from "../responsive";
 
 const Container = styled.div`
-	background-color: black;
-	height: 80vh;
-	display: flex;
-	position: relative;
-	flex-wrap: wrap;
-	justify-content: center;
-`;
-const Arrow = styled.div`
-	width: 40px;
-	height: 40px;
-	background-color: darkgray;
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: ${(props) => props.direction === "left" && "10px"};
-	right: ${(props) => props.direction === "right" && "10px"};
-	margin: auto;
-	cursor: pointer;
-	opacity: 0.5;
-	z-index: 2;
-`;
-const Wrapper = styled.div`
-	display: flex;
-	height: 60vh;
-	width: 100vw;
-	align-items: center;
-	transition: all 1.5s ease;
-	transform: translateX(${(props) => props.slideIndex * -100}vw);
-`;
+	width: 100%;
+	height: auto;
+	background-color: #000;
 
-const TitleContainer = styled.div`
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
+	margin-top: 2rem;
 	position: relative;
-	width: 88vw;
-	margin-block: 2rem;
-
-	@media only screen and (max-width: 55rem) {
-		margin: 0 auto;
-		justify-content: center;
-	}
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 `;
 
 const Title = styled.h1`
 	color: white;
 	font-weight: 900;
 	font-size: 48px;
+	margin-top: 2rem;
 
 	@media only screen and (max-width: 55rem) {
 		font-size: 36px;
 	}
 `;
 
-const Slide = styled.div`
-	width: 100vw;
+const VideosWrapper = styled.div`
+	display: flex;
+	transition: transform 0.5s ease-in-out;
+	transform: translateX(${(props) => props.slideIndex * -100}vw);
 `;
 
-// Preferred settings
+const Arrow = styled.div`
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: ${(props) => props.direction === "left" && "20px"};
+	right: ${(props) => props.direction === "right" && "20px"};
+	width: 40px;
+	height: 40px;
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	z-index: 2;
+	transition: background-color 0.3s;
+
+	&:hover {
+		background-color: rgba(0, 0, 0, 0.8);
+	}
+
+	@media only screen and (max-width: 55rem) {
+		width: 30px;
+		height: 30px;
+	}
+`;
+
 const VideoContainer = styled.div`
 	width: 100vw;
+	height: 540px;
 	display: flex;
 	justify-content: center;
-	flex: 1 1 100%;
-`;
-const Video = styled(ReactPlayer)`
-	width: 400px;
-	height: 540px;
-`;
+	align-items: center;
+	background-color: #000;
 
+	@media only screen and (max-width: 32rem) {
+		height: 360px;
+	}
+`;
 const ViewVideosContainer = styled.div`
 	display: flex;
 	width: 87vw;
@@ -87,8 +79,6 @@ const ViewVideosContainer = styled.div`
 	align-items: flex-end;
 	position: relative;
 	padding-right: 28px;
-
-	${mobile({ width: "100vw", paddingRight: 0 })};
 `;
 const ViewVideos = styled.button`
 	height: 55px;
@@ -104,36 +94,38 @@ const ViewVideos = styled.button`
 
 export default function LatestVideos() {
 	const [slideIndex, setSlideIndex] = useState(0);
+	const totalSlides = latestVideos.length;
+
 	const handleClick = (direction) => {
 		if (direction === "left") {
-			setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2);
+			setSlideIndex(slideIndex > 0 ? slideIndex - 1 : totalSlides - 1);
 		} else {
-			setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
+			setSlideIndex(slideIndex < totalSlides - 1 ? slideIndex + 1 : 0);
 		}
 	};
 
 	return (
 		<Container>
+			<Title>Latest Videos</Title>
 			<Arrow direction="left" onClick={() => handleClick("left")}>
-				<ArrowBackIos />
+				<ArrowBackIos style={{ color: "white" }} />
 			</Arrow>
-			<TitleContainer>
-				<Title>Latest Videos</Title>
-			</TitleContainer>
-			<Wrapper slideIndex={slideIndex}>
-				{latestVideos.map((item) => (
-					<Slide key={item.id}>
-						<VideoContainer>
-							<Video url={item.video} alt="music video" />
-						</VideoContainer>
-					</Slide>
+			<VideosWrapper slideIndex={slideIndex}>
+				{latestVideos.map((video) => (
+					<VideoContainer key={video.id}>
+						<OptimizedVideo
+							url={video.video}
+							thumbnail={video.thumbnail}
+							alt={video.title}
+						/>
+					</VideoContainer>
 				))}
-			</Wrapper>
+			</VideosWrapper>
 			<ViewVideosContainer>
 				<ViewVideos>View All Videos</ViewVideos>
 			</ViewVideosContainer>
 			<Arrow direction="right" onClick={() => handleClick("right")}>
-				<ArrowForwardIos />
+				<ArrowForwardIos style={{ color: "white" }} />
 			</Arrow>
 		</Container>
 	);
