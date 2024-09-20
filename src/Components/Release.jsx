@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import OptimizedImage from "./OptimizedImage";
 
 const Container = styled.div`
 	height: 100%;
@@ -11,7 +12,7 @@ const Container = styled.div`
 		align-items: flex-start;
 	}
 `;
-const Image = styled.img`
+const Image = styled(OptimizedImage)`
 	height: 403px;
 	width: 403px;
 	margin-right: 43px;

@@ -2,6 +2,7 @@ import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
 import React, { useState } from "react";
 import styled from "styled-components";
 import { sliderItems } from "../data/data";
+import OptimizedImage from "./OptimizedImage";
 
 const Container = styled.div`
 	width: 100%;
@@ -53,7 +54,7 @@ const Slide = styled.div`
 const ImgContainer = styled.div`
 	height: 100%;
 `;
-const Image = styled.img`
+const Image = styled(OptimizedImage)`
 	height: 100%;
 	width: 100vw;
 	object-fit: cover;
@@ -63,9 +64,9 @@ export default function Slider() {
 	const [slideIndex, setSlideIndex] = useState(0);
 	const handleClick = (direction) => {
 		if (direction === "left") {
-			setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2);
+			setSlideIndex(slideIndex > 0 ? slideIndex - 1 : sliderItems.length - 1);
 		} else {
-			setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
+			setSlideIndex(slideIndex < sliderItems.length - 1 ? slideIndex + 1 : 0);
 		}
 	};
 
@@ -76,7 +77,7 @@ export default function Slider() {
 			</Arrow>
 			<Wrapper slideIndex={slideIndex}>
 				{sliderItems.map((item) => (
-					<Slide key={item.id}>
+					<Slide key={item.id} bg={item.bg}>
 						<ImgContainer>
 							<Image src={item.img} />
 						</ImgContainer>

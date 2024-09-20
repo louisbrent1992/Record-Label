@@ -53,6 +53,8 @@
 	},
 	"devDependencies": {
 		"@webpack-cli/generators": "^3.0.7",
-		"compression-webpack-plugin": "^9.2.0"
+		"clean-webpack-plugin": "^4.0.0",
+		"compression-webpack-plugin": "^9.2.0",
+		"image-webpack-loader": "^8.1.0"
 	}
 }

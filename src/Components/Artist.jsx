@@ -8,6 +8,7 @@ import {
 } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import OptimizedImage from "./OptimizedImage";
 
 const Info = styled.div`
 	height: 100%;
@@ -31,7 +32,7 @@ const ArtistContainer = styled.div`
 	}
 `;
 
-const Image = styled.img`
+const Image = styled(OptimizedImage)`
 	z-index: 1;
 	position: relative;
 	object-fit: cover;
@@ -130,7 +131,7 @@ const SocialMediaIcons = styled.div`
 export default function Artist({ name, website, img, store, social }) {
 	return (
 		<ArtistContainer>
-			<Image src={img} />
+			<Image src={img} alt={name} />
 
 			<Info>
 				<TopRow>
