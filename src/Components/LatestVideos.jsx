@@ -46,15 +46,22 @@ const TitleContainer = styled.div`
 	align-items: center;
 	position: relative;
 	width: 88vw;
+	margin-block: 2rem;
 
-	${mobile({ justifyContent: "center" })}
+	@media only screen and (max-width: 55rem) {
+		margin: 0 auto;
+		justify-content: center;
+	}
 `;
 
 const Title = styled.h1`
 	color: white;
 	font-weight: 900;
 	font-size: 48px;
-	margin-top: 0.5rem;
+
+	@media only screen and (max-width: 55rem) {
+		font-size: 36px;
+	}
 `;
 
 const Slide = styled.div`

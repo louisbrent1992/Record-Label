@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { mobile } from "../responsive";
 import SignUpForm from "./SignUpForm";
 
 const Container = styled.div`
@@ -9,8 +8,12 @@ const Container = styled.div`
 	align-items: center;
 	height: auto;
 	background-color: #f5cb5c;
-	${mobile({ flexDirection: "column" })};
+
+	@media only screen and (max-width: 55rem) {
+		flex-direction: column;
+	}
 `;
+
 const Left = styled.div`
 	flex: 33%;
 	display: flex;
@@ -19,14 +22,20 @@ const Left = styled.div`
 	padding: 151px;
 	margin-right: 20px;
 
-	${mobile({ padding: "30px 0px", textAlign: "center" })}
+	@media only screen and (max-width: 55rem) {
+		padding: 30px 0px;
+		text-align: center;
+	}
 `;
 
 const Announcement = styled.h1`
 	font-size: 50px;
 	color: #333533;
 
-	${mobile({ margin: "0 auto" })}
+	@media only screen and (max-width: 55rem) {
+		margin: 0 auto;
+		padding-inline: 20px;
+	}
 `;
 
 const Right = styled.div`

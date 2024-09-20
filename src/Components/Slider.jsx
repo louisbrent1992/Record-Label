@@ -2,15 +2,19 @@ import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
 import React, { useState } from "react";
 import styled from "styled-components";
 import { sliderItems } from "../data/data";
-import { mobile } from "../responsive";
 
 const Container = styled.div`
 	width: 100%;
 	height: 80vh;
 	display: flex;
+	align-items: center;
 	position: relative;
 	overflow: hidden;
 	background-color: black;
+
+	@media only screen and (max-width: 55rem) {
+		height: 50vh;
+	}
 `;
 const Arrow = styled.div`
 	width: 40px;
@@ -31,7 +35,6 @@ const Arrow = styled.div`
 	z-index: 2;
 `;
 const Wrapper = styled.div`
-	height: 100vh;
 	display: flex;
 	transition: all 1.5s ease;
 	transform: translate(${(props) => props.slideIndex * -100}vw);
@@ -42,16 +45,18 @@ const Slide = styled.div`
 	display: flex;
 	align-items: center;
 	background-color: #${(props) => props.bg};
+
+	@media only screen and (max-width: 55rem) {
+		height: 50vh;
+	}
 `;
 const ImgContainer = styled.div`
-	height: 80vh;
+	height: 100%;
 `;
 const Image = styled.img`
-	height: 80vh;
+	height: 100%;
 	width: 100vw;
 	object-fit: cover;
-
-	${mobile({ ojectFit: "contain" })}
 `;
 
 export default function Slider() {

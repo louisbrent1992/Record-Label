@@ -1,20 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 import { newReleases } from "../data/data";
-import { mobile, tablet } from "../responsive";
 import Release from "./Release";
 
 const Container = styled.div`
 	height: auto;
 	width: 100vw;
 	display: flex;
-	background-color: white;
+	overflow-y: hidden;
 	flex-wrap: wrap;
 	justify-content: center;
 	margin: 0;
 	color: #333533;
 
-	${tablet({ height: "auto" })}
+	@media only screen and (max-width: 55rem) {
+		height: auto;
+	}
 `;
 
 const TitleContainer = styled.div`
@@ -23,21 +24,26 @@ const TitleContainer = styled.div`
 	width: 88vw;
 	justify-content: flex-start;
 	align-items: center;
+	margin-block: 2rem;
 
-	${mobile({ justifyContent: "center" })}
+	@media only screen and (max-width: 55rem) {
+		justify-content: center;
+	}
 `;
 const Title = styled.h1`
 	font-size: 48px;
 	font-weight: 900;
 	margin: 0px, 0px, 14px;
 	color: #333533;
+
+	@media only screen and (max-width: 55rem) {
+		font-size: 36px;
+	}
 `;
 const ReleasesContainer = styled.div`
 	width: 100vw;
 	display: flex;
 	align-items: center;
-	padding-bottom: 6px;
-	overflow-x: auto;
 	overflow-y: hidden;
 	margin-left: 4rem;
 
@@ -45,7 +51,9 @@ const ReleasesContainer = styled.div`
 		display: none;
 	}
 
-	${mobile({ marginLeft: "0.75rem" })}
+	@media only screen and (max-width: 55rem) {
+		margin-left: 0.75rem;
+	}
 `;
 const ViewReleasesContainer = styled.div`
 	display: flex;
@@ -56,7 +64,10 @@ const ViewReleasesContainer = styled.div`
 	margin-top: 9px;
 	padding-right: 28px;
 
-	${mobile({ width: "100vw", paddingRight: 0 })};
+	@media only screen and (max-width: 55rem) {
+		width: 100vw;
+		padding-right: 0;
+	}
 `;
 const ViewReleases = styled.button`
 	height: 53px;

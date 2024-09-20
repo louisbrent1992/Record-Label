@@ -2,7 +2,6 @@ import { CheckBox } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
 import { countryList } from "../data/countries";
-import { mobile } from "../responsive";
 
 const Container = styled.div`
 	height: 100%;
@@ -16,7 +15,9 @@ const Label = styled.h3`
 const Form = styled.form`
 	width: 75%;
 
-	${mobile({ margin: "0 auto" })}
+	@media only screen and (max-width: 55rem) {
+		margin: 0 auto;
+	}
 `;
 
 const InputContainer = styled.div`

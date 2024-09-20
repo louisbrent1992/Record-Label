@@ -1,15 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import { mobile, tablet } from "../responsive";
 
 const Container = styled.div`
 	height: 100%;
+	margin-block: 20px;
 
-	${mobile({
-		display: "flex",
-		flexDirection: "column",
-		alignItems: "flex-start",
-	})}
+	@media only screen and (max-width: 55rem) {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
 `;
 const Image = styled.img`
 	height: 403px;
@@ -17,8 +17,15 @@ const Image = styled.img`
 	margin-right: 43px;
 	object-fit: cover;
 
-	${mobile({ height: "303px", width: "297px" })};
-	${tablet({ height: "403px", width: "403px" })};
+	@media only screen and (max-width: 32rem) {
+		height: 303px;
+		width: 297px;
+	}
+
+	@media only screen and (min-width: 32rem) and (max-width: 55rem) {
+		height: 403px;
+		width: 403px;
+	}
 `;
 
 const TitleContainer = styled.div`

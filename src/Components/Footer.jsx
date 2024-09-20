@@ -1,160 +1,56 @@
-import {
-	Copyright,
-	Facebook,
-	Instagram,
-	Twitter,
-	YouTube,
-} from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
-import { mobile, smallMobile, tablet } from "../responsive";
+import SocialIcons from "./SocialIcons";
+import InfoLinks from "./InfoLinks";
 
-const Container = styled.div`
-	height: 80px;
-	margin: 0 auto;
-	display: flex;
-	justify-content: center;
+const FooterContainer = styled.footer`
+	width: 100%;
 	background-color: black;
 	color: white;
-`;
-
-const Wrapper = styled.div`
 	display: flex;
-	width: 100%;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	margin: 0 auto;
-	gap: 3rem;
-	overflow-x: auto;
-	overflow-y: hidden;
+	padding: 1rem 0;
+	position: relative;
+	bottom: 0;
+	z-index: 9;
 
-	::-webkit-scrollbar {
-		display: none;
+	@media only screen and (max-width: 55rem) {
+		padding: 2rem 0;
 	}
-
-	${mobile({ gap: "0.5rem" })}
-	${tablet({ marginLeft: "2rem", gap: "2rem" })}
 `;
 
-const LogoContainer = styled.div`
+const FooterInnerContainer = styled.div`
+	width: 100%;
 	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 1rem;
 
-	${mobile({ display: "none" })}
+	@media only screen and (max-width: 55rem) {
+		flex-direction: column;
+		gap: 1rem;
+	}
 `;
+
 const Logo = styled.h3`
 	font-weight: 900;
 	font-size: 18px;
-`;
 
-const CopyrightContainer = styled.div`
-	display: flex;
-	font-size: 11px;
-	margin-right: 1rem;
-	&:hover {
-		transition: color 0.2s ease-in-out;
-		color: #f5cb5c;
-	}
-`;
-const CopyrightIcon = styled(Copyright)``;
-
-const SocialContainer = styled.div`
-	display: flex;
-	gap: 1rem;
-
-	${smallMobile({ flexDirection: "column", display: "none" })}
-`;
-const SocialIcon = styled.div`
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	a {
-		color: white;
-	}
-
-	a:visited {
-		color: white;
-	}
-
-	a:hover {
-		transition: color 0.2s ease-in-out;
-		color: #f5cb5c;
-		cursor: pointer;
-	}
-`;
-
-const InfoContainer = styled.div`
-	display: flex;
-	align-items: center;
-
-	${smallMobile({ flexDirection: "column" })}
-`;
-const Info = styled.h5`
-	font-size: 11px;
-	margin-right: 1rem;
-`;
-const Link = styled.a`
-	font-weight: 900;
-	cursor: pointer;
-
-	&:hover {
-		transition: color 0.2s ease-in-out;
-		color: #f5cb5c;
+	@media only screen and (max-width: 55rem) {
+		font-size: 16px;
 	}
 `;
 
 export default function Footer({ social }) {
-	const { YoutubeAcc, InstagramAcc, FacebookAcc, TwitterAcc } = social;
 	return (
-		<Container>
-			<Wrapper>
-				<SocialContainer>
-					<SocialIcon>
-						<Link to={FacebookAcc.url}>
-							<Facebook />
-						</Link>
-					</SocialIcon>
-					<SocialIcon>
-						<Link to={TwitterAcc.url}>
-							<Twitter />
-						</Link>
-					</SocialIcon>
-					<SocialIcon>
-						<Link to={InstagramAcc.url}>
-							<Instagram />
-						</Link>
-					</SocialIcon>
-					<SocialIcon>
-						<Link to={YoutubeAcc.url}>
-							<YouTube />
-						</Link>
-					</SocialIcon>
-				</SocialContainer>
-				<LogoContainer>
-					<Logo>LOGO</Logo>
-				</LogoContainer>
-				<InfoContainer>
-					<CopyrightContainer>
-						<CopyrightIcon style={{ fontSize: "small" }} />
-						<Link src="" style={{ fontSize: "11px" }}>
-							2022 Your-site-brand
-						</Link>
-					</CopyrightContainer>
-
-					<Info>
-						<Link>Privacy Policy</Link>
-					</Info>
-					<Info>
-						<Link>Terms & Conditions</Link>
-					</Info>
-					<Info>
-						<Link>Cookie Consent</Link>
-					</Info>
-					<Info>
-						<Link src="">Do Not Sell My Personal Information</Link>
-					</Info>
-				</InfoContainer>
-			</Wrapper>
-		</Container>
+		<FooterContainer>
+			<FooterInnerContainer>
+				<Logo>LOGO</Logo>
+				<SocialIcons social={social} />
+				<InfoLinks />
+			</FooterInnerContainer>
+		</FooterContainer>
 	);
 }

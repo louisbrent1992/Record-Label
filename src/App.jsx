@@ -1,18 +1,24 @@
-import Home from "./Pages/Home";
+import React, { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import NoMatch from "./Pages/NoMatch";
+import Loading from "./Components/Loading";
+
+// Lazy load components
+const Home = lazy(() => import("./Pages/Home"));
+const NoMatch = lazy(() => import("./Pages/NoMatch"));
 
 function App() {
 	return (
 		<Router>
-			<Switch>
-				<Route exact path="/">
-					<Home />
-				</Route>
-				<Route>
-					<NoMatch />
-				</Route>
-			</Switch>
+			<Suspense fallback={<Loading />}>
+				<Switch>
+					<Route exact path="/">
+						<Home />
+					</Route>
+					<Route>
+						<NoMatch />
+					</Route>
+				</Switch>
+			</Suspense>
 		</Router>
 	);
 }

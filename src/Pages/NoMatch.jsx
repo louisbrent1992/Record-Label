@@ -13,6 +13,11 @@ const Container = styled.div`
 const Message = styled.h1`
 	position: absolute;
 	color: black;
+	font-size: 2rem;
+
+	@media only screen and (max-width: 32rem) {
+		font-size: 1.5rem;
+	}
 `;
 
 export default function NoMatch() {

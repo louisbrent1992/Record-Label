@@ -8,7 +8,6 @@ import {
 } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { mobile, tablet } from "../responsive";
 
 const Info = styled.div`
 	height: 100%;
@@ -22,17 +21,14 @@ const Info = styled.div`
 `;
 
 const ArtistContainer = styled.div`
-	display: flex;
-	border: 0.5px solid gray;
-	flex: 1 1 33%;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	height: 100%;
 	width: 100%;
 	position: relative;
 	&:hover ${Info} {
 		opacity: 1;
 	}
-
-	${mobile({ flex: "1 1 100%" })}
-	${tablet({ flex: "1 1 33%" })}
 `;
 
 const Image = styled.img`
@@ -40,11 +36,17 @@ const Image = styled.img`
 	position: relative;
 	object-fit: cover;
 	width: 100%;
-	height: 205px;
+	height: auto;
+	max-height: 200px; // Set a maximum height for the images
 	transition: all 0.5s ease;
 
-	${mobile({ ojectFit: "contain" })};
-	${tablet({ ojectFit: "contain" })};
+	@media (max-width: 768px) {
+		object-fit: contain;
+	}
+
+	@media (max-width: 32rem) {
+		object-fit: contain;
+	}
 `;
 
 const TopRow = styled.div`
@@ -52,6 +54,7 @@ const TopRow = styled.div`
 	height: 50%;
 	justify-content: space-between;
 `;
+
 const StoreIconContainer = styled.div`
 	margin: 10px;
 
@@ -69,6 +72,7 @@ const StoreIconContainer = styled.div`
 		cursor: pointer;
 	}
 `;
+
 const Website = styled.div`
 	margin: 10px;
 	font-weight: 900;
@@ -95,6 +99,7 @@ const BottomRow = styled.div`
 	justify-content: space-between;
 	align-items: flex-end;
 `;
+
 const Name = styled.div`
 	margin: 10px;
 	font-weight: 900;
@@ -106,7 +111,9 @@ const Name = styled.div`
 		cursor: pointer;
 	}
 `;
+
 const SocialContainer = styled.div``;
+
 const SocialMediaIcons = styled.div`
 	margin: 10px 10px 5px 30px;
 	display: flex;

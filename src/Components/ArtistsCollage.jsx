@@ -7,11 +7,13 @@ const Container = styled.div`
 	width: 100%;
 	background-color: white;
 	color: #333533;
+	padding-inline: 1rem;
 `;
 
 const ArtistsContainer = styled.div`
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 20px;
 	position: relative;
 	height: auto;
 	width: 100%;
@@ -22,12 +24,16 @@ const TitleContainer = styled.div`
 	width: 100vw;
 	display: flex;
 	justify-content: center;
+	margin-block: 2rem;
 `;
 const Title = styled.h1`
 	color: #333533;
 	font-weight: 900;
 	font-size: 48px;
-	margin: 20px 0px 40px 0px;
+
+	@media only screen and (max-width: 55rem) {
+		font-size: 36px;
+	}
 `;
 
 export default function ArtistsCollage({ labelArtists }) {
