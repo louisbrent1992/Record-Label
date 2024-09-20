@@ -51,9 +51,9 @@ export const sliderItems = [
 export const latestVideos = [
 	{
 		id: 1,
-		video: "https://www.youtube.com/watch?v=3JZ_D3ELwOQ",
+		video: "https://www.youtube.com/watch?v=5qap5aO4i9A",
 		title: "Stellar Waves - 'Cosmic Rhythm' (Official Music Video)",
-		thumbnail: "https://img.youtube.com/vi/3JZ_D3ELwOQ/0.jpg",
+		thumbnail: "https://img.youtube.com/vi/5qap5aO4i9A/0.jpg",
 		views: 1500000,
 		likes: 75000,
 		releaseDate: "2023-05-15",
@@ -82,7 +82,7 @@ export const labelArtists = [
 	{
 		id: 1,
 		name: "Stellar Waves",
-		img: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4",
+		img: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
 		genre: "Electronic",
 		bio: "Pioneering the future of electronic music with their unique blend of cosmic sounds and pulsating rhythms.",
 		social: {
@@ -100,11 +100,16 @@ export const labelArtists = [
 			{ name: "Galactic Pulse", year: 2021 },
 			{ name: "Astral Journeys", year: 2019 },
 		],
+		additionalImages: [
+			"https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+			"https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+			"https://images.unsplash.com/photo-1605722243979-fe0be8158232?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+		],
 	},
 	{
 		id: 2,
 		name: "Neon Dreams",
-		img: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819",
+		img: "https://images.unsplash.com/photo-1501612780327-45045538702b",
 		genre: "Synth Pop",
 		bio: "Bringing the 80s back with a modern twist, Neon Dreams creates infectious synth-pop anthems that light up the night.",
 		social: {
@@ -126,7 +131,7 @@ export const labelArtists = [
 	{
 		id: 3,
 		name: "Luna Eclipse",
-		img: "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=1000&q=80",
+		img: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1000&q=80",
 		genre: "Alternative Rock",
 		bio: "With haunting melodies and introspective lyrics, Luna Eclipse brings a fresh voice to the alternative rock scene.",
 		social: {
@@ -144,7 +149,69 @@ export const labelArtists = [
 			{ name: "Eclipse", year: 2021 },
 		],
 	},
-	// ... more artists ...
+	{
+		id: 4,
+		name: "Solar Flare",
+		img: "https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=1000&q=80",
+		genre: "Ambient",
+		bio: "Creating serene soundscapes that transport listeners to otherworldly realms.",
+		social: {
+			Youtube: { url: "https://www.youtube.com/c/SolarFlare" },
+			Instagram: { url: "https://www.instagram.com/solarflare" },
+			Facebook: { url: "https://www.facebook.com/SolarFlare" },
+			Twitter: { url: "https://twitter.com/SolarFlare" },
+			Spotify: { url: "https://open.spotify.com/artist/solarflare" },
+		},
+		website: "https://www.solarflare.com",
+		store: "https://store.solarflare.com",
+		topTracks: ["Sunrise Serenity", "Eclipse", "Galactic Drift"],
+		albums: [
+			{ name: "Celestial Harmony", year: 2022 },
+			{ name: "Stellar Drift", year: 2020 },
+		],
+	},
+	{
+		id: 5,
+		name: "Echo Chamber",
+		img: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1000&q=80",
+		genre: "Experimental",
+		bio: "Pushing the boundaries of sound with innovative and avant-garde compositions.",
+		social: {
+			Youtube: { url: "https://www.youtube.com/c/EchoChamber" },
+			Instagram: { url: "https://www.instagram.com/echochamber" },
+			Facebook: { url: "https://www.facebook.com/EchoChamber" },
+			Twitter: { url: "https://twitter.com/EchoChamber" },
+			Spotify: { url: "https://open.spotify.com/artist/echochamber" },
+		},
+		website: "https://www.echochamber.com",
+		store: "https://store.echochamber.com",
+		topTracks: ["Resonance", "Feedback Loop", "Harmonic Dissonance"],
+		albums: [
+			{ name: "Sound Waves", year: 2021 },
+			{ name: "Echoes", year: 2019 },
+		],
+	},
+	{
+		id: 6,
+		name: "Aurora Borealis",
+		img: "https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=1000&q=80",
+		genre: "Classical",
+		bio: "Blending classical music with modern influences to create timeless pieces.",
+		social: {
+			Youtube: { url: "https://www.youtube.com/c/AuroraBorealis" },
+			Instagram: { url: "https://www.instagram.com/auroraborealis" },
+			Facebook: { url: "https://www.facebook.com/AuroraBorealis" },
+			Twitter: { url: "https://twitter.com/AuroraBorealis" },
+			Spotify: { url: "https://open.spotify.com/artist/auroraborealis" },
+		},
+		website: "https://www.auroraborealis.com",
+		store: "https://store.auroraborealis.com",
+		topTracks: ["Northern Lights", "Symphony of Stars", "Celestial Dance"],
+		albums: [
+			{ name: "Starlit Symphony", year: 2023 },
+			{ name: "Aurora", year: 2021 },
+		],
+	},
 ];
 
 export const newReleases = [

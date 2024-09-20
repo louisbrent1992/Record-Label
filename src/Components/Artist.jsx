@@ -39,14 +39,6 @@ const Image = styled.img`
 	height: auto;
 	max-height: 200px; // Set a maximum height for the images
 	transition: all 0.5s ease;
-
-	@media (max-width: 768px) {
-		object-fit: contain;
-	}
-
-	@media (max-width: 32rem) {
-		object-fit: contain;
-	}
 `;
 
 const TopRow = styled.div`
