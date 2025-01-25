@@ -53,7 +53,7 @@ const Arrow = styled.div`
 
 const VideosWrapper = styled.div`
 	display: flex;
-	transition: transform 0.5s ease-in-out;
+	transition: transform 1s ease;
 	transform: translate(${(props) => props.slideIndex * -100}vw);
 `;
 
