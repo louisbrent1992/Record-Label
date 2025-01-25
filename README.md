@@ -38,7 +38,7 @@
     <a href="https://github.com/louisbrent1992/Record-Label"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/louisbrent1992/Record-Label">View Demo</a>
+    <a href="http://record-label-two.vercel.app">View Demo</a>
     ·
     <a href="https://github.com/louisbrent1992/Record-Label/issues">Report Bug</a>
     ·
