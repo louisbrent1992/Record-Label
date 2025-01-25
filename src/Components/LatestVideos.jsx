@@ -71,11 +71,11 @@ const VideoContainer = styled.div`
 const ViewVideosContainer = styled.div`
 	display: flex;
 	height: 55px;
-	width: 87vw;
+	width: 100vw;
 	justify-content: flex-end;
 	align-items: flex-end;
 	margin-top: 9px;
-	padding-right: 28px;
+	padding-right: 7rem;
 
 	@media only screen and (max-width: 55rem) {
 		width: 100vw;
