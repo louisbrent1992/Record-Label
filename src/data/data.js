@@ -21,7 +21,7 @@ export const social = {
 export const sliderItems = [
 	{
 		id: 1,
-		img: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+		img: "https://res.cloudinary.com/client-images/image/upload/c_fill,ar_16:9,g_auto/v1737825121/Artist%20Branding%20Site/chase-fade-XOLIrILp-vI-unsplash_ngabd5.jpg",
 		title: "New Release: 'Echoes of Tomorrow' by Stellar Waves",
 		description:
 			"Experience the future of sound with Stellar Waves' groundbreaking new album.",
@@ -30,7 +30,7 @@ export const sliderItems = [
 	},
 	{
 		id: 2,
-		img: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+		img: "https://res.cloudinary.com/client-images/image/upload/c_fill,ar_16:9,g_auto/v1737825120/Artist%20Branding%20Site/joel-muniz-QadWZdWSe_8-unsplash_1_xbtsl8.jpg",
 		title: "Summer Tour 2023: Neon Dreams",
 		description:
 			"Join Neon Dreams on their electrifying summer tour across the nation!",
@@ -39,7 +39,7 @@ export const sliderItems = [
 	},
 	{
 		id: 3,
-		img: "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+		img: "https://res.cloudinary.com/client-images/image/upload/c_fill,ar_16:9,g_auto/v1737825120/Artist%20Branding%20Site/vidar-nordli-mathisen-EBbjmyCyY1w-unsplash_rfnhpd.jpg",
 		title: "Artist Spotlight: Rising Star Luna Eclipse",
 		description:
 			"Discover the haunting melodies and powerful lyrics of our newest signing, Luna Eclipse.",
@@ -51,27 +51,33 @@ export const sliderItems = [
 export const latestVideos = [
 	{
 		id: 1,
-		video: "https://www.youtube.com/watch?v=5qap5aO4i9A",
+		video:
+			"https://res.cloudinary.com/client-images/video/upload/v1737828247/Artist%20Branding%20Site/Videos/handheld-low-angle-shot-of-cheeky-gen-z-african-american-lady-in-hip-hop-class-SBV-351740279-preview_hu4jsv.mp4",
 		title: "Stellar Waves - 'Cosmic Rhythm' (Official Music Video)",
-		thumbnail: "https://img.youtube.com/vi/5qap5aO4i9A/0.jpg",
+		thumbnail:
+			"https://res.cloudinary.com/client-images/image/upload/v1737831984/Artist%20Branding%20Site/videoframe_0_tncbed.png",
 		views: 1500000,
 		likes: 75000,
 		releaseDate: "2023-05-15",
 	},
 	{
 		id: 2,
-		video: "https://www.youtube.com/watch?v=2Vv-BfVoq4g",
+		video:
+			"https://res.cloudinary.com/client-images/video/upload/v1737828352/Artist%20Branding%20Site/Videos/chest-up-shot-of-three-diverse-rappers-in-sunglasses-fashionable-clothes-and-w-SBV-351739812-preview_trglik.mp4",
 		title: "Neon Dreams - 'Electric Nights' (Live at Glastonbury)",
-		thumbnail: "https://img.youtube.com/vi/2Vv-BfVoq4g/0.jpg",
+		thumbnail:
+			"https://res.cloudinary.com/client-images/image/upload/v1737831985/Artist%20Branding%20Site/video1thumb_hciery.png",
 		views: 980000,
 		likes: 62000,
 		releaseDate: "2023-04-22",
 	},
 	{
 		id: 3,
-		video: "https://www.youtube.com/watch?v=RgKAFK5djSk",
+		video:
+			"https://res.cloudinary.com/client-images/video/upload/v1737828243/Artist%20Branding%20Site/Videos/funny-girl-performing-cool-dance-at-glass-office-buildings-background-concept--SBV-348586972-preview_fjjt1h.mp4",
 		title: "Luna Eclipse - 'Shadows and Light' (Lyric Video)",
-		thumbnail: "https://img.youtube.com/vi/RgKAFK5djSk/0.jpg",
+		thumbnail:
+			"https://res.cloudinary.com/client-images/image/upload/v1737832058/Artist%20Branding%20Site/videoframe_2_ghwffv.png",
 		views: 750000,
 		likes: 45000,
 		releaseDate: "2023-03-10",

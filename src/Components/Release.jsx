@@ -16,7 +16,7 @@ const Image = styled(OptimizedImage)`
 	height: 403px;
 	width: 403px;
 	margin-right: 43px;
-	object-fit: cover;
+	object-fit: fill;
 
 	@media only screen and (max-width: 32rem) {
 		height: 303px;

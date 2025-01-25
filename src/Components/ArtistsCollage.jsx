@@ -13,6 +13,7 @@ const Container = styled.div`
 const ArtistsContainer = styled.div`
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	justify-items: center;
 	gap: 20px;
 	position: relative;
 	height: auto;

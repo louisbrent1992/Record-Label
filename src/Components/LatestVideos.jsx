@@ -8,8 +8,7 @@ const Container = styled.div`
 	width: 100%;
 	height: auto;
 	background-color: #000;
-
-	margin-top: 2rem;
+	padding-top: 2rem;
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -29,6 +28,7 @@ const Title = styled.h1`
 
 const VideosWrapper = styled.div`
 	display: flex;
+
 	transition: transform 0.5s ease-in-out;
 	transform: translateX(${(props) => props.slideIndex * -100}vw);
 `;
@@ -61,8 +61,8 @@ const Arrow = styled.div`
 `;
 
 const VideoContainer = styled.div`
-	width: 100vw;
 	height: 540px;
+	width: 100vw;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -96,18 +96,19 @@ export default function LatestVideos() {
 	const [slideIndex, setSlideIndex] = useState(0);
 	const totalSlides = latestVideos.length;
 
-	const handleClick = (direction) => {
-		if (direction === "left") {
-			setSlideIndex(slideIndex > 0 ? slideIndex - 1 : totalSlides - 1);
-		} else {
-			setSlideIndex(slideIndex < totalSlides - 1 ? slideIndex + 1 : 0);
-		}
+	const handleVideoSlideChange = (slideDirection) => {
+		const newSlideIndex =
+			slideDirection === "left"
+				? (slideIndex - 1 + totalSlides) % totalSlides
+				: (slideIndex + 1) % totalSlides;
+
+		setSlideIndex(newSlideIndex);
 	};
 
 	return (
 		<Container>
 			<Title>Latest Videos</Title>
-			<Arrow direction="left" onClick={() => handleClick("left")}>
+			<Arrow direction="left" onClick={() => handleVideoSlideChange("left")}>
 				<ArrowBackIos style={{ color: "white" }} />
 			</Arrow>
 			<VideosWrapper slideIndex={slideIndex}>
@@ -124,7 +125,7 @@ export default function LatestVideos() {
 			<ViewVideosContainer>
 				<ViewVideos>View All Videos</ViewVideos>
 			</ViewVideosContainer>
-			<Arrow direction="right" onClick={() => handleClick("right")}>
+			<Arrow direction="right" onClick={() => handleVideoSlideChange("right")}>
 				<ArrowForwardIos style={{ color: "white" }} />
 			</Arrow>
 		</Container>
