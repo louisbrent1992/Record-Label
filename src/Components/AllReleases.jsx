@@ -58,8 +58,8 @@ export default function AllReleases() {
 						<Option disabled selected>
 							Color
 						</Option>
-						<Option>White</Option>
-						<Option>Black</Option>
+						<Option>whitesmoke</Option>
+						<Option>#333533</Option>
 						<Option>Red</Option>
 						<Option>Blue</Option>
 						<Option>Yellow</Option>

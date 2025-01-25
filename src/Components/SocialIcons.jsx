@@ -13,11 +13,11 @@ const SocialIcon = styled.div`
 	justify-content: center;
 
 	a {
-		color: white;
+		color: whitesmoke;
 	}
 
 	a:visited {
-		color: white;
+		color: whitesmoke;
 	}
 
 	a:hover {

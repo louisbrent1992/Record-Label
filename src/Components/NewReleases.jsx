@@ -73,11 +73,17 @@ const ViewReleases = styled.button`
 	height: 53px;
 	width: 243px;
 	border: none;
+
 	font-size: 20px;
 	font-weight: 900;
 	background-color: #f5cb5c;
 	color: #333533;
 	cursor: pointer;
+
+	&:hover {
+		transition: color 0.2s ease-in-out;
+		color: whitesmoke;
+	}
 `;
 
 export default function NewReleases() {

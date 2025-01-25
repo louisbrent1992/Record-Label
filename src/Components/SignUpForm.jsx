@@ -53,7 +53,7 @@ const TextField = styled.select`
 	color: #333533;
 `;
 const Option = styled.option`
-	background-color: white;
+	background-color: whitesmoke;
 `;
 
 const CheckboxLabel = styled.h3`
@@ -86,12 +86,14 @@ const SubscribeButtonContainer = styled.div``;
 const SubscribeButton = styled.button`
 	height: 50px;
 	width: 190px;
-	color: white;
+	color: whitesmoke;
 	font-size: 20px;
 	font-weight: 900;
 	border: none;
-	background-color: black;
+	background-color: #333533;
 	cursor: pointer;
+	box-shadow: 0px 8px 8px rgba(0, 0.2, 0, 0.2);
+	border-radius: 5px;
 
 	&:hover {
 		transition: color 0.2s ease-in-out;

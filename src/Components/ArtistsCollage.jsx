@@ -5,7 +5,7 @@ import Artist from "./Artist";
 const Container = styled.div`
 	height: 100%;
 	width: 100%;
-	background-color: white;
+	background-color: whitesmoke;
 	color: #333533;
 	padding-inline: 1rem;
 `;

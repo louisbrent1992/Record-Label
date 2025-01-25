@@ -13,7 +13,7 @@ const Container = styled.div`
 `;
 
 const Title = styled.h1`
-	color: white;
+	color: whitesmoke;
 	font-weight: 900;
 	font-size: 48px;
 	margin-top: 2rem;
@@ -64,6 +64,7 @@ const VideoContainer = styled.div`
 	justify-content: center;
 	align-items: center;
 	background-color: #000;
+	border-radius: 5px;
 	@media only screen and (max-width: 32rem) {
 		height: 360px;
 	}
@@ -91,6 +92,11 @@ const ViewVideos = styled.button`
 	background-color: #f5cb5c;
 	color: #333533;
 	cursor: pointer;
+
+	&:hover {
+		transition: color 0.2s ease-in-out;
+		color: whitesmoke;
+	}
 `;
 
 export default function LatestVideos() {
@@ -110,7 +116,7 @@ export default function LatestVideos() {
 		<Container>
 			<Title>Latest Videos</Title>
 			<Arrow direction="left" onClick={() => handleVideoSlideChange("left")}>
-				<ArrowBackIos style={{ color: "white" }} />
+				<ArrowBackIos style={{ color: "whitesmoke" }} />
 			</Arrow>
 			<VideosWrapper slideIndex={slideIndex}>
 				{latestVideos.map((video) => (
@@ -127,7 +133,7 @@ export default function LatestVideos() {
 				<ViewVideos>View All Videos</ViewVideos>
 			</ViewVideosContainer>
 			<Arrow direction="right" onClick={() => handleVideoSlideChange("right")}>
-				<ArrowForwardIos style={{ color: "white" }} />
+				<ArrowForwardIos style={{ color: "whitesmoke" }} />
 			</Arrow>
 		</Container>
 	);

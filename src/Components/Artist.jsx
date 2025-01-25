@@ -13,29 +13,34 @@ import OptimizedImage from "./OptimizedImage";
 const Info = styled.div`
 	height: 100%;
 	width: 100%;
-	color: white;
+	color: whitesmoke;
 	position: absolute;
 	z-index: 2;
 	opacity: 0;
 	transition: all 0.5s ease;
 	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 20px;
 `;
 
 const ArtistContainer = styled.div`
 	display: grid;
+
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	height: 100%;
 	width: 100%;
 	position: relative;
 	&:hover ${Info} {
+		transition: all 0.5s ease;
 		opacity: 1;
 	}
 `;
 
 const Image = styled(OptimizedImage)`
+	border-radius: 20px;
 	z-index: 1;
 	position: relative;
 	object-fit: cover;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 	width: 100%;
 	height: auto;
 	max-height: 200px; // Set a maximum height for the images
@@ -52,11 +57,11 @@ const StoreIconContainer = styled.div`
 	margin: 10px;
 
 	a {
-		color: white;
+		color: whitesmoke;
 	}
 
 	a:visited {
-		color: white;
+		color: whitesmoke;
 	}
 
 	a:hover {
@@ -72,11 +77,11 @@ const Website = styled.div`
 
 	a {
 		text-decoration: none;
-		color: white;
+		color: whitesmoke;
 	}
 
 	a:visited {
-		color: white;
+		color: whitesmoke;
 	}
 
 	a:hover {
@@ -96,7 +101,7 @@ const BottomRow = styled.div`
 const Name = styled.div`
 	margin: 10px;
 	font-weight: 900;
-	color: white;
+	color: whitesmoke;
 
 	&:hover {
 		transition: color 0.2s ease-in-out;
@@ -114,11 +119,11 @@ const SocialMediaIcons = styled.div`
 	gap: 5px;
 
 	a {
-		color: white;
+		color: whitesmoke;
 	}
 
 	a:visited {
-		color: white;
+		color: whitesmoke;
 	}
 
 	a:hover {

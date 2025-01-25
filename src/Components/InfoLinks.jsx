@@ -20,7 +20,7 @@ const Link = styled.a`
 	font-weight: 900;
 	cursor: pointer;
 	text-decoration: none;
-	color: white;
+	color: whitesmoke;
 
 	&:hover {
 		transition: color 0.2s ease-in-out;

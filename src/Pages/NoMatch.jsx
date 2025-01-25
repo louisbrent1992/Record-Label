@@ -12,7 +12,7 @@ const Container = styled.div`
 
 const Message = styled.h1`
 	position: absolute;
-	color: black;
+	color: #333533;
 	font-size: 2rem;
 
 	@media only screen and (max-width: 32rem) {

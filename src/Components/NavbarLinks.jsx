@@ -11,7 +11,7 @@ const NavbarLinkContainer = styled.div`
 `;
 
 const NavbarLink = styled(Link)`
-	color: white;
+	color: whitesmoke;
 	font-size: x-large;
 	font-family: Arial, Helvetica, sans-serif;
 	text-decoration: none;
@@ -30,7 +30,7 @@ const NavbarLink = styled(Link)`
 `;
 
 const NavbarAnchor = styled.a`
-	color: white;
+	color: whitesmoke;
 	font-size: x-large;
 	font-family: Arial, Helvetica, sans-serif;
 	text-decoration: none;

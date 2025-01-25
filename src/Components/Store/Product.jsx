@@ -30,7 +30,7 @@ const Container = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: white;
+	background-color: whitesmoke;
 	border: 2px solid #dce1e4;
 	position: relative;
 
@@ -48,7 +48,7 @@ const Icon = styled.div`
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
-	background-color: white;
+	background-color: whitesmoke;
 	display: flex;
 	align-items: center;
 	justify-content: center;

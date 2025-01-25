@@ -6,7 +6,7 @@ import InfoLinks from "./InfoLinks";
 const FooterContainer = styled.footer`
 	width: 100%;
 	background-color: black;
-	color: white;
+	color: whitesmoke;
 	display: flex;
 	flex-direction: column;
 	align-items: center;

@@ -38,7 +38,7 @@ const NavbarInnerContainer = styled.div`
 `;
 
 const Logo = styled.h1`
-	color: white;
+	color: whitesmoke;
 	font-size: 48px;
 	font-weight: 900;
 
@@ -51,7 +51,7 @@ const Logo = styled.h1`
 const OpenLinksButton = styled.button`
 	background: none;
 	border: none;
-	color: white;
+	color: whitesmoke;
 	font-size: 50px;
 	cursor: pointer;
 
@@ -80,13 +80,13 @@ const NavbarExtendedContainer = styled.div`
 `;
 
 const NavbarLinkExtended = styled(Link)`
-	color: white;
+	color: whitesmoke;
 	font-size: 20px;
 	font-family: Arial, Helvetica, sans-serif;
 	text-decoration: none;
 
 	a:visited {
-		color: white;
+		color: whitesmoke;
 	}
 
 	&:hover {
@@ -96,14 +96,14 @@ const NavbarLinkExtended = styled(Link)`
 `;
 
 const NavbarAnchor = styled.a`
-	color: white;
+	color: whitesmoke;
 	font-size: 20px;
 	font-family: Arial, Helvetica, sans-serif;
 	text-decoration: none;
 	cursor: pointer;
 
 	a:visited {
-		color: white;
+		color: whitesmoke;
 	}
 
 	&:hover {

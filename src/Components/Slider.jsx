@@ -11,7 +11,7 @@ const Container = styled.div`
 	align-items: center;
 	position: relative;
 	overflow: hidden;
-	background-color: black;
+	background-color: #333533;
 
 	@media only screen and (max-width: 32rem) {
 		height: 50vh;

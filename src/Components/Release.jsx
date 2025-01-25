@@ -16,7 +16,9 @@ const Image = styled(OptimizedImage)`
 	height: 403px;
 	width: 403px;
 	margin-right: 43px;
-	object-fit: fill;
+	object-fit: cover;
+	border-radius: 5px;
+	box-shadow: 0px 8px 8px rgba(0, 0.2, 0, 0.2);
 
 	@media only screen and (max-width: 32rem) {
 		height: 303px;
@@ -47,14 +49,16 @@ const Source = styled.button`
 	width: 196px;
 	font-weight: 900;
 	font-size: 20px;
-	border: 2px solid black;
+	border: none;
+	border-radius: 5px;
 	background-color: #f5cb5c;
 	color: #333533;
 	margin-top: 23px;
 	cursor: pointer;
+	box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
 
 	&:hover {
-		background-color: white;
+		color: whitesmoke;
 		transition: all 0.3s ease-in-out;
 	}
 `;
