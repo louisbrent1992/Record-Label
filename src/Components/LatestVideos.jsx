@@ -10,9 +10,6 @@ const Container = styled.div`
 	background-color: #000;
 	padding-top: 2rem;
 	position: relative;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 `;
 
 const Title = styled.h1`
@@ -20,17 +17,11 @@ const Title = styled.h1`
 	font-weight: 900;
 	font-size: 48px;
 	margin-top: 2rem;
+	text-align: center;
 
 	@media only screen and (max-width: 55rem) {
 		font-size: 36px;
 	}
-`;
-
-const VideosWrapper = styled.div`
-	display: flex;
-
-	transition: transform 0.5s ease-in-out;
-	transform: translateX(${(props) => props.slideIndex * -100}vw);
 `;
 
 const Arrow = styled.div`
@@ -60,6 +51,12 @@ const Arrow = styled.div`
 	}
 `;
 
+const VideosWrapper = styled.div`
+	display: flex;
+	transition: transform 0.5s ease-in-out;
+	transform: translate(${(props) => props.slideIndex * -100}vw);
+`;
+
 const VideoContainer = styled.div`
 	height: 540px;
 	width: 100vw;
@@ -67,28 +64,32 @@ const VideoContainer = styled.div`
 	justify-content: center;
 	align-items: center;
 	background-color: #000;
-
 	@media only screen and (max-width: 32rem) {
 		height: 360px;
 	}
 `;
 const ViewVideosContainer = styled.div`
 	display: flex;
+	height: 55px;
 	width: 87vw;
 	justify-content: flex-end;
 	align-items: flex-end;
-	position: relative;
+	margin-top: 9px;
 	padding-right: 28px;
+
+	@media only screen and (max-width: 55rem) {
+		width: 100vw;
+		padding-right: 0;
+	}
 `;
 const ViewVideos = styled.button`
-	height: 55px;
+	height: 53px;
 	width: 243px;
-	background-color: #f5cb5c;
-	color: #333533;
-	position: absolute;
+	border: none;
 	font-size: 20px;
 	font-weight: 900;
-	border: none;
+	background-color: #f5cb5c;
+	color: #333533;
 	cursor: pointer;
 `;
 
