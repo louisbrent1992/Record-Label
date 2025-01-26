@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import ReactPlayer from "react-player";
 import { PlayArrow } from "@material-ui/icons";
 import styled from "styled-components";
@@ -46,12 +45,6 @@ const OptimizedVideo = ({ video, thumbnail, alt, ...props }) => {
 			/>
 		</Container>
 	);
-};
-
-OptimizedVideo.propTypes = {
-	url: PropTypes.string.isRequired,
-	thumbnail: PropTypes.string,
-	alt: PropTypes.string,
 };
 
 export default OptimizedVideo;

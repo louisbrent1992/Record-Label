@@ -1,4 +1,3 @@
-import { CheckBox } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
 import { countryList } from "../data/countries";
@@ -73,6 +72,10 @@ const CheckOption = styled.p`
 	align-items: center;
 `;
 
+const Checkbox = styled.input`
+	margin-right: 10px;
+`;
+
 const Agreement = styled.p`
 	margin: 25px 0px;
 	font-size: 9px;
@@ -126,22 +129,20 @@ export default function SignUpForm() {
 				</TextFieldContainer>
 				<CheckboxLabel>Subscribe to Email Updates From: </CheckboxLabel>
 				<CheckboxContainer>
-					<CheckBox
+					<Checkbox
 						type="checkbox"
 						name="your-site-brand"
 						id="your-site-brand"
 						value="your-site-brand"
-						checked="checked"
-						style={{ fontSize: "medium", marginRight: "10px" }}
+						style={{ fontSize: "medium" }}
 					/>
 					<CheckOption>YOUR-SITE-BRAND</CheckOption>
-					<CheckBox
+					<Checkbox
 						type="checkbox"
 						name="ALL OF OUR AFFILIATES"
 						id="ALL OF OUR AFFILIATES"
 						value="ALL OF OUR AFFILIATES"
-						checked="checked"
-						style={{ fontSize: "medium", marginRight: "10px" }}
+						style={{ fontSize: "medium" }}
 					/>
 					<CheckOption>OUR BUSINESS AFFILIATES</CheckOption>
 				</CheckboxContainer>
