@@ -38,7 +38,7 @@
     <a href="https://github.com/louisbrent1992/Record-Label"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://artist-brand-site-2oyq5zvtw-lbprojects-projects.vercel.app">View Demo</a>
+    <a target="_blank" href="https://artist-brand-site-2oyq5zvtw-lbprojects-projects.vercel.app">View Demo</a>
     ·
     <a href="https://github.com/louisbrent1992/Record-Label/issues">Report Bug</a>
     ·
